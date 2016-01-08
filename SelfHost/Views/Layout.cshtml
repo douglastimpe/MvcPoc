@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-	<head>
-		<title>Hello @ViewBag.Title</title>
-	</head>
-	<body>
-	    @RenderBody()
-	</body>
+<html ng-app="meetupApp">
+<head>
+    <title>Hello @ViewBag.Title</title>
+</head>
+<body ng-controller="meetupsController">
+    @RenderBody()
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script>@RenderSection("Scripts")</script>
+</body>
 </html>

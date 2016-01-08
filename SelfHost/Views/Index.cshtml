@@ -2,8 +2,21 @@
     _Layout = "Layout.cshtml";
     ViewBag.Title = @Model.Name;
 }
-<h1>I love Israel</h1>
+<h1>Razor with Angular working</h1>
 
 Name: <input type="text" value="@Model.Name"/>
 <br/>
 Email: <input type="text" value="@Model.Email"/>
+<h2>{{message}}</h2>
+
+@section Scripts{
+   (function(){
+        var app = angular.module('meetupApp', []);
+
+        app.controller('meetupsController', function($scope, $http){
+            $scope.message = "Hello from Angular";
+        });
+    }());
+
+
+}
